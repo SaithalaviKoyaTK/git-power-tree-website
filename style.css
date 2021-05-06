@@ -8,7 +8,7 @@ body::after {
   left: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
+  position: fixed;
   z-index: -1;
 }
 #logo {
@@ -17,15 +17,16 @@ body::after {
   position: fixed;
   top: 0;
   left: 0;
+  box-shadow: 1vmax 1vmin 1vmax 1vmin #504e4ee3;
 }
 #headings-container {
-  width: 85vmax;
-  height: 100%;
+  width: 59vmax;
+  height: 30vmin;
   position: fixed;
   left: 15vmax;
-  top: 0;
-  /*border: solid;
-  color: #ffcc00;*/
+  top: 5vmin;
+  /* border: solid;
+  color: #ffcc00; */
 }
 /*.text-border-line {
   border: solid;
@@ -37,25 +38,38 @@ body::after {
   font-size: 5vw;
   color: rgb(155, 112, 56);
   position: absolute;
-  top: 5vmin;
-  left: 25vmax;
+  top: -5vmin;
+  left: 5vmax;
+  text-transform: capitalize;
 }
 #heading2 {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 5vw;
   color: rgb(155, 112, 56);
   position: absolute;
-  top: 30vmin;
-  left: 10vmax;
+  top: 10vmin;
+  left: 17vmax;
+  text-transform: capitalize;
 }
+#heading3-container {
+  width: 25vmax;
+  height: 30vmin;
+  /* border: solid; */
+  position: fixed;
+  top: 5vmin;
+  right: 0;
+}
+
 #heading3 {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 8vw;
   color: rgb(155, 112, 56);
-  position: absolute;
-  top: 4vmin;
-  left: 0vmax;
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
   animation: rs15 4s infinite;
+  text-transform: capitalize;
+  text-align: center;
 }
 @keyframes rs15 {
   0% {
@@ -66,15 +80,6 @@ body::after {
   }
 }
 
-#heading3-container {
-  width: 300px;
-  height: 300px;
-  /* border: solid; */
-  position: absolute;
-  bottom: 0;
-  left: 30vmax;
-}
-
 @media screen and (max-width: 480px) {
   #logo {
     width: 15vmax;
@@ -83,7 +88,7 @@ body::after {
     top: 0;
     left: 0;
   }
-  #container {
+  #headings-container {
     width: 75vmax;
     height: 100%;
     position: fixed;
@@ -102,7 +107,7 @@ body::after {
     font-size: 9vw;
     color: rgb(155, 112, 56);
     position: absolute;
-    top: 50vmin;
+    top: 40vmin;
     left: 0vmax;
   }
   #heading2 {
@@ -130,13 +135,118 @@ body::after {
     left: 4vmax;
   }
 }
+#navbar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: rgb(255, 153, 0);
+  text-decoration: none;
+  font-size: 1.5vmax;
+  font-family: Helvetica, ariel;
+  padding: 1vmin;
+}
+
+#navbar a:hover {
+  color: red;
+}
+
+#main-doc {
+  width: 50vmax;
+  height: 50vmin;
+  overflow: scroll;
+  top: 45vmin;
+  left: 25vmax;
+  position: fixed;
+  /*   border: solid red; */
+}
+
+.main-section {
+  font-family: Helvetica;
+  font-size: 1.5vmax;
+  /* font-weight: bold; */
+}
+#about {
+  position: relative;
+  background-color: rgb(185, 250, 250);
+  border: solid rgb(7, 245, 245);
+  height: 50vmin;
+  margin-bottom: 6vmin;
+}
+/* #briquette-photo {
+
+} */
+
+#application {
+  position: relative;
+  background-color: rgb(250, 237, 165);
+  border: solid rgb(245, 182, 7);
+}
+#technical-specification {
+  position: relative;
+  background-color: rgb(213, 253, 153);
+  border: solid rgb(7, 245, 7);
+}
+#features-and-benefits {
+  position: relative;
+  background-color: rgb(245, 179, 212);
+  border: solid rgb(245, 7, 166);
+}
+
+/* #customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+} */
+
+#d {
+  position: relative;
+}
+
+#contact {
+  position: relative;
+}
+
+@media screen and (min-width: 1300px) {
+  #navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+}
+
 .bottom-corner-left {
   width: 0;
   height: 0;
   border-left: 150px solid #ffcc00;
   border-top: 150px solid transparent;
   border-right: 150px solid transparent;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
 }
@@ -146,7 +256,7 @@ body::after {
   border-right: 150px solid #ffcc00;
   border-left: 150px solid transparent;
   border-top: 150px solid transparent;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
 }
